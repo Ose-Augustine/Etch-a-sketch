@@ -1,15 +1,15 @@
-/* .subContainer > div:nth-child(odd){
+.subContainer > div:nth-child(odd){
    background:#eee;
-   text-align:center;
-} */
+}
 .subContainer{
    display:grid;
-   grid-template-columns:repeat(2,2fr);
+   grid-template-columns:repeat(3,1fr 1fr 1fr);
    grid-gap:1em;
-   grid-auto-rows:i6px;
-   grid-auto-columns:16px;
+   /* grid-auto-rows:minmax(32px, auto);
+   grid-auto-columns:16px; */
 
 }
-.subContainer:hover{
-   background:red;
+.subContainer > div{
+   border:2px solid black;
+
 }

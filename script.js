@@ -5,7 +5,9 @@ subContainer.classList.toggle("subContainer")
 container.appendChild(subContainer);
 while(i < 100){
     let newDiv=document.createElement("div");
+    newDiv.textContent="hello world";
     subContainer.appendChild(newDiv);
+
     i ++;
 }
 //subContainer.style.display="flex";
