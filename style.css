@@ -1,0 +1,15 @@
+/* .subContainer > div:nth-child(odd){
+   background:#eee;
+   text-align:center;
+} */
+.subContainer{
+   display:grid;
+   grid-template-columns:repeat(2,2fr);
+   grid-gap:1em;
+   grid-auto-rows:i6px;
+   grid-auto-columns:16px;
+
+}
+.subContainer:hover{
+   background:red;
+}
