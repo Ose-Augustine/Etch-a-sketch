@@ -12,6 +12,11 @@ while(i < 100){
     subContainer.appendChild(newDiv);
     i ++;
 }
+let userInput=' ';
+
 button.addEventListener("click",function(){
-    alert(prompt('Number of square per side of the new grid?',''));
+    let userChoice=prompt('Number of square per side of the new grid?','')
+    userInput += userChoice;
+    alert(`Changing the layout to your liking with ${userChoice}`);
 })
+console.log(userInput);
