@@ -3,15 +3,15 @@
 } 
 .subContainer > div{
    background:#eee;
-   border:1px solid blueviolet;
+   border:1px solid blueviolet; 
    padding:16px;
 }
 .subContainer{
    display:grid;
-   grid-template-columns:repeat(16,1fr );
-   grid-template-rows:repeat(16,1fr);
-   max-width:960px;
-   max-height:960px;
+   grid-template-columns:repeat(8,1fr);
+   grid-template-columns:repeat(8,1fr); 
+   max-width:200px;
+   max-height:200px;
    /* grid-gap:1em; */
    /* grid-auto-rows:minmax(32px, auto);
    grid-auto-columns:16px; */
