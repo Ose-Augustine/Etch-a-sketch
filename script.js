@@ -30,9 +30,8 @@ function originalLayOut(){
     };
 }
 function generateUserGrid(userInput){
-    let gridLimit=userInput ** 2;
+    let gridLimit=userInput ** 2;//to generate the total number of squares that will be required for the grid//
     userStyle.setAttribute('style',`grid-template-columns:repeat(${userInput},1fr)`);
-    // userStyle.setAttribute('style',`grid-template-rows:repeat (${userInput},1fr)`);
     i=0;    
     while((i < gridLimit) && userInput <= 100){
         let userGridSpec=document.createElement('div');
@@ -45,11 +44,10 @@ function generateUserGrid(userInput){
 let userInput=' ';
 
 button0.addEventListener("click",function(){
-    console.clear();
     let userChoice=prompt('Number of square per side of the new grid?','')
     generateUserGrid(userChoice);
     userInput += userChoice;
-    alert(`Changing the layout to your liking with ${userChoice}`);
+    alert(`Changing the layout to your liking with ${userChoice}\n Don\'t forget to refresh and try different layouts!`);
 })
 button1.addEventListener('click',function(){
     originalLayOut();

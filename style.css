@@ -6,6 +6,7 @@
    background:#eee;
    border:1px solid blueviolet; 
    padding:16px;
+   transition-duration:1s;
 }
 .subContainer{
    display:grid;
@@ -18,8 +19,10 @@
    grid-auto-columns:16px; */
 
 }
-.subContainer > div:hover{
+.subContainer > div:hover,
+.userStyle > div:hover{
    background:rgb(206, 206, 25);
+   transform:rotate(180deg);
 }
 
 .userStyle{
