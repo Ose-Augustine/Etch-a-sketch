@@ -1,7 +1,8 @@
  .container{
    max-width:600px;
 } 
-.subContainer > div{
+.subContainer > div,
+.userStyle > div{
    background:#eee;
    border:1px solid blueviolet; 
    padding:16px;
@@ -19,4 +20,10 @@
 }
 .subContainer > div:hover{
    background:rgb(206, 206, 25);
+}
+
+.userStyle{
+   display:grid;
+   max-width:200px;
+   max-height:200px;
 }

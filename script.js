@@ -19,7 +19,6 @@ container.appendChild(subContainer);
 const userStyle=document.createElement("div");
 userStyle.classList.toggle("userStyle");
 container.appendChild(userStyle);
-userStyle.style.display='grid';
 
 function originalLayOut(){
     i=0;
@@ -33,7 +32,7 @@ function originalLayOut(){
 function generateUserGrid(userInput){
     let gridLimit=userInput ** 2;
     userStyle.setAttribute('style',`grid-template-columns:repeat(${userInput},1fr)`);
-    userStyle.setAttribute('style',`grid-template-rows:repeat (${userInput},1fr)`);
+    // userStyle.setAttribute('style',`grid-template-rows:repeat (${userInput},1fr)`);
     i=0;    
     while((i < gridLimit) && userInput <= 100){
         let userGridSpec=document.createElement('div');
