@@ -1,4 +1,5 @@
 const container=document.querySelector("#container");
+
 //first button and appends to the container//
 const button0=document.createElement("button");
 button0.textContent="Generate your design";
@@ -15,10 +16,6 @@ const subContainer=document.createElement("div");
 subContainer.classList.toggle("subContainer")
 container.appendChild(subContainer);
 
-//subContainer to handle all the user style grid//
-const userStyle=document.createElement("div");
-userStyle.classList.toggle("userStyle");
-container.appendChild(userStyle);
 
 function originalLayOut(){
     i=0;
@@ -31,12 +28,12 @@ function originalLayOut(){
 }
 function generateUserGrid(userInput){
     let gridLimit=userInput ** 2;//to generate the total number of squares that will be required for the grid//
-    userStyle.setAttribute('style',`grid-template-columns:repeat(${userInput},1fr)`);
+    subContainer.setAttribute('style',`grid-template-columns:repeat(${userInput},1fr)`);
     i=0;    
     while((i < gridLimit) && userInput <= 100){
         let userGridSpec=document.createElement('div');
         userGridSpec.textContent=' ';
-        userStyle.appendChild(userGridSpec);
+        subContainer.appendChild(userGridSpec);
         i ++;
     }
 }
