@@ -1,5 +1,12 @@
 body {
-   display:flex;
+   display:grid;
+   grid-template-columns: repeat(2,1fr 2fr);
+   gap:1em;
+   color:antiquewhite;
+   background:rgb(197, 112, 0);
+   font-style: italic;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
 }
  #container{
     display:flex;
