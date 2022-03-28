@@ -58,3 +58,9 @@ button1.addEventListener('click',function(){
     originalLayOut();
     alert("This is the original layout of this page. Try making yours!\n Refresh before changing!")
 })
+
+//to access the second container on the main body
+const container0=document.querySelector("#container0");
+const instruction=document.createElement("p");
+container0.appendChild(instruction);
+instruction.textContent="Hello! This is a sketch pad. Click on any of the buttons to either make your desired grid layout or generate a default grid.Don\'t forget to refresh the page before clicking any button of your choice"
