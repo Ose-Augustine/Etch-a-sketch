@@ -16,11 +16,16 @@ const subContainer=document.createElement("div");
 subContainer.classList.toggle("subContainer")
 container.appendChild(subContainer);
 
+//list of colors to apply to divs in subcotainer
+const COLORS = ['#3C9EE7','#37993C','#E73C99','#3CE746','#E7993C'];
 
 function originalLayOut(){
-    i=0;
+    i=0;;
     while(i < 64){
         let newDiv=document.createElement("div");
+        newDiv.addEventListener("mouseover",()=>{
+            newDiv.style.background=COLORS[Math.floor(Math.random() * COLORS.length)];
+        })
         newDiv.textContent=" ";
         subContainer.appendChild(newDiv);
         i ++;
@@ -32,6 +37,9 @@ function generateUserGrid(userInput){
     i=0;    
     while((i < gridLimit) && userInput <= 100){
         let userGridSpec=document.createElement('div');
+        userGridSpec.addEventListener("mouseover",()=>{
+            userGridSpec.style.background=COLORS[Math.floor(Math.random() * COLORS.length)];
+        })
         userGridSpec.textContent=' ';
         subContainer.appendChild(userGridSpec);
         i ++;
@@ -50,5 +58,3 @@ button1.addEventListener('click',function(){
     originalLayOut();
     alert("This is the original layout of this page. Try making yours!\n Refresh before changing!")
 })
-
-
